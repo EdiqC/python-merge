@@ -63,3 +63,6 @@ for i in range(rows):
             back_img[center[0]+i,center[1]+j] =img[i,j] #賦值顏色
 show(back_img) #顯示圖片
 
+back_img = cv2.cvtColor(back_img,cv2.COLOR_RGB2BGR) #圖像格式轉換
+back_img=cv2.resize(back_img,None,fx=0.8,fy=0.8) #圖像縮放20%
+cv2.imwrite('result.png',back_img) #保存圖像
